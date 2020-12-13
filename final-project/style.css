@@ -1,0 +1,67 @@
+html,
+body {
+  position: fixed;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  text-transform: uppercase;
+  font-family: futura;
+  color: white;
+}
+
+h1 {
+  position: fixed;
+  opacity: 0.5;
+  bottom: 10vh;
+  right: 10vw;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+p {
+  position: fixed;
+  opacity: 0.5;
+  top: 10vh;
+  right: 10vw;
+}
+
+canvas {
+  display: block;
+}
+
+/* GUI SLIDER */
+.qs_main {
+  position: fixed;
+  top: 300px;
+  opacity: 0.8;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  position: fixed;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.button-back {
+  top: calc(50vh - 10px);
+  left: 10vw;
+}
+
+.button-forth {
+  top: calc(50vh - 10px);
+  right: 10vw;
+}
+
+a:hover {
+  color: white;
+  cursor: pointer;
+  animation: ani 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1;
+  opacity: 1;
+  transform: scale(3);
+  /* transition: opacity 2s;
+  transition: transform 2s; */
+  transition: all 0.7s ease-in-out;
+}

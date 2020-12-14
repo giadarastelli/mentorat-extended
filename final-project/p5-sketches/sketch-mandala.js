@@ -66,7 +66,8 @@ function draw() {
   translate(width / 2, height / 2);
   push();
   rotate(-PI / 30 * frameCount / 40);
-  drawCircle(0, 0, sizeform);
+  //drawCircle(0, 0, sizeform);
+  drawCircle(mouseX / 2, mouseY / 2, sizeform);
   pop();
 }
 

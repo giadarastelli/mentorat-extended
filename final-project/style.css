@@ -55,6 +55,11 @@ a {
   right: 10vw;
 }
 
+.button-homepage {
+  top: 10vh;
+  right: 10vw;
+}
+
 a:hover {
   color: white;
   cursor: pointer;

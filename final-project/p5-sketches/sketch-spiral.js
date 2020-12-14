@@ -10,7 +10,6 @@ var circles = 10; //numFibonacci
 var form = 2; //ellipse or line
 var volume = 0.4;
 
-
 //SOUND VARIABLES
 var sound;
 var amp;

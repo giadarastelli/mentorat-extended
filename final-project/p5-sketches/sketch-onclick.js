@@ -22,6 +22,12 @@ function draw() {
     background(0, 0, 0, 100);
     translate(width / 2, height / 2);
     for (const wav of petals) wav.display();
+
+    for (let n = 0; n < petals.length; n++) {
+        if (petals[n].outDiam > width) {
+            petals.slice(n, 1);
+        }
+    }
 }
 
 class Petal {

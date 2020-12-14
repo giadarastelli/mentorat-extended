@@ -20,7 +20,7 @@ function setup() {
   frameRate(30);
 
 
-  sound = loadSound("sound1.mp3", loaded);
+  sound = loadSound("Sound1.mp3", loaded);
   sound.setVolume(vol);
   amp = new p5.Amplitude();
 

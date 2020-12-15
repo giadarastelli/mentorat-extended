@@ -7,7 +7,7 @@ var lineweight = 1;
 var fade = 30;
 var spin = 50;
 var circles = 10; //numFibonacci
-var form = 2; //ellipse or line
+var shape = 2; //ellipse or line
 var volume = 0.4;
 
 //SOUND VARIABLES
@@ -40,7 +40,7 @@ function setup() {
 
   //GUI y-lenght
   sliderRange(0, 2, 0.1);
-  gui.addGlobals('form');
+  gui.addGlobals('shape');
 
   //GUI form rotation
   sliderRange(-50, 50, 5);
@@ -86,7 +86,7 @@ function draw() {
     //opacity amplitude stroke 
     //stroke(size * 15, 30, n * circles, size * 10);
     serieFibonacci[n] = i;
-    ellipse(0, 0, i * 2, i * form);
+    ellipse(0, 0, i * 2, i * shape);
 
     rotate(PI / 2);
     translate(-serieFibonacci[n - 1], 0);

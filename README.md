@@ -1,6 +1,6 @@
 # geometric experiments
 
-Series of experiments with [p5.js](https://p5js.org) 😎
+Miniseries of audio-visual experiments made with [p5.js](https://p5js.org) 😎
 
 ![shot](shot2.png)
 

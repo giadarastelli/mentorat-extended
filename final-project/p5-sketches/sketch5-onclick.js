@@ -18,10 +18,6 @@ var shape = 1;
 var sound;
 var reverb;
 
-function preload() {
-    sound = loadSound("Song for Ramanujan (Saraswati Devi).mp3");
-}
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(0);
@@ -29,7 +25,7 @@ function setup() {
     noFill();
     rectMode(CENTER);
 
-    sound.play();
+    sound = loadSound("Song for Ramanujan (Saraswati Devi).mp3", loaded);
     reverb = new p5.Reverb();
     sound.disconnect(); // to only hear reverb
 

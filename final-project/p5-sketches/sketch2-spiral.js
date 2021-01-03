@@ -16,16 +16,12 @@ var amp;
 var size;
 var vol = 0.5;
 
-function preload() {
-  sound = loadSound("Dandy.mp3");
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   angleMode(RADIANS);
 
-  sound.play();
+  sound = loadSound("Dandy.mp3", loaded);
   sound.setVolume(vol);
   amp = new p5.Amplitude();
 
@@ -53,6 +49,10 @@ function setup() {
   //GUI volume
   sliderRange(0, 0.5, 0.1);
   gui.addGlobals('volume');
+}
+
+function loaded() {
+  sound.play();
 }
 
 function draw() {

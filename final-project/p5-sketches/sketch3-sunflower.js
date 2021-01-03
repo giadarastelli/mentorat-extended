@@ -17,11 +17,6 @@ var vol = 1;
 
 var switchDirection;
 
-function preload() {
-    sound = loadSound("Tomie's Bubbles.mp3");
-}
-
-
 function setup() {
     createCanvas(windowWidth, windowHeight);
     background(0);
@@ -31,7 +26,7 @@ function setup() {
     switchDirection = false;
     noStroke();
 
-    sound.play();
+    sound = loadSound("Tomie's Bubbles.mp3", loaded);
     sound.setVolume(vol);
     amp = new p5.Amplitude();
 
@@ -55,6 +50,9 @@ function setup() {
     gui.addGlobals('volume');
 }
 
+function loaded() {
+    sound.play();
+}
 
 function draw() {
     background(0, 0, 0, fade);

@@ -10,17 +10,12 @@ var amp;
 var sizeAmp;
 var vol = 0.5;
 
-function preload() {
-  sound = loadSound("Invocation.mp3");
-}
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   frameRate(30);
 
-  sound.play();
-  // sound = loadSound("Invocation.mp3", loaded);
+  sound = loadSound("Invocation.mp3", loaded);
   sound.setVolume(vol);
   amp = new p5.Amplitude();
 
@@ -36,9 +31,9 @@ function setup() {
   gui.addGlobals('volume');
 }
 
-// function loaded() {
-//   sound.play();
-// }
+function loaded() {
+  sound.play();
+}
 
 function draw() {
   background(0, 0, 0, fade);

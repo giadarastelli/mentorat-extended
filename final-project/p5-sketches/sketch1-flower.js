@@ -13,17 +13,12 @@ var amp;
 var size;
 var vol = 1;
 
-
-function preload() {
-  sound = loadSound("Empty Playground.mp3");
-}
-
 function setup() {
   textSize(8);
   createCanvas(windowWidth, windowHeight);
   background(0);
 
-  sound.play();
+  sound = loadSound("Empty Playground.mp3", loaded);
   sound.setVolume(vol);
   amp = new p5.Amplitude();
 
@@ -50,6 +45,10 @@ function setup() {
   //GUI volume
   sliderRange(0, 1, 0.1);
   gui.addGlobals('volume');
+}
+
+function loaded() {
+  sound.play();
 }
 
 function draw() {

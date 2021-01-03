@@ -79,7 +79,10 @@ function draw() {
 
         //stroke(0, 200, size * 15);
         //strokeWeight(size / 5);
-        fill(0, 255, size * 15);
+        fill(0);
+        stroke(0, 255, size * 15);
+        strokeWeight(2);
+
         ellipse(x, y, size * n / 20);
 
         console.log(size);
@@ -88,9 +91,10 @@ function draw() {
     // if (shape >= 2) {
     if (mouseX >= width / 2 && mouseX <= width) {
         // fill(size * 15, 0, size * 15, size * 20);
-        fill(size * 20, 0, 100);
+        fill(0);
+        stroke(size * 20, 100, 50);
         push();
-        rotate(PI / 4);
+        rotate(n);
         rect(x, y, size * n / 20, size * n / 20);
         pop();
     }

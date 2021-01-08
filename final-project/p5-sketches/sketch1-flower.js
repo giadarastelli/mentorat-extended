@@ -14,6 +14,7 @@ var size;
 var vol = 1;
 
 function setup() {
+
   textSize(8);
   createCanvas(windowWidth, windowHeight);
   background(0);
@@ -27,7 +28,7 @@ function setup() {
 
   //GUI Y-lenght
   sliderRange(0, width / 2, 1);
-  gui = createGui('change the values ✎');
+  gui = createGui('“ change slider values ”'); //empty text p5 gui
   gui.addGlobals('lenght');
 
   //GUI opacity background
@@ -40,7 +41,7 @@ function setup() {
 
   //GUI transparency stroke
   sliderRange(0, 255, 5);
-  gui.addGlobals('transparancy');
+  gui.addGlobals('transparency');
 
   //GUI volume
   sliderRange(0, 1, 0.1);

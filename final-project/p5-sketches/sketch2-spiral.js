@@ -26,7 +26,7 @@ function setup() {
   amp = new p5.Amplitude();
 
   //GUI numFibonacci = number forms on the canvas
-  gui = createGui('change the values ✎');
+  gui = createGui('“ change slider values ”'); //text p5 gui
   sliderRange(0, 20, 1);
   gui.addGlobals('circles');
 

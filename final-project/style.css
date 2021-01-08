@@ -5,80 +5,113 @@ body {
   margin: 0;
   padding: 0;
   background-color: black;
-  text-transform: uppercase;
-  font-family: futura;
-  color: white;
+  font-family: Helvetica, sans-serif;
+  color: black;
 }
 
-.qs_main {
-  font-family: futura;
-  font-size: 15px;
-  font-weight: 800;
-  opacity: 0.8;
-}
-
-h1 {
-  position: fixed;
-  opacity: 0.5;
-  bottom: 10vh;
-  right: 10vw;
-  font-size: 30px;
-  font-weight: bold;
-}
-
+/* INTRODUCTION TEXT MAIN MENU */
 
 p {
   position: fixed;
-  opacity: 0.5;
-  left: 10vw;
-  right: 20vw;
-  text-align: left;
-  /* text-align: justify; */
-  font-size: 16px;
-  font-weight: lighter;
-  border: 1px solid none;
-  padding: 40vh 0;
+  width: 320px;
+  height: 350px;
+  color: white;
+  background: none;
+  position: fixed;
+  opacity: 1;
+  left: calc(50vw - 160px);
+  text-align: center;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
-  vertical-align: baseline;
+  border-radius: 100%;
 }
 
-canvas {
-  display: block;
+.typo1 {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  position: fixed;
+  top: calc(50vh - 300px);
 }
 
-/* GUI SLIDER */
+.typo2 {
+  position: fixed;
+  top: calc(50vh - 175px);
+}
 
+.typo3 {
+  position: fixed;
+  font-size: 18px;
+  font-weight: lighter;
+  font-style: italic;
+  text-transform: lowercase;
+  top: calc(50vh - 30px);
+
+}
+
+
+/* BUTTONS */
 a {
   color: white;
+  position: fixed;
   text-decoration: none;
   position: fixed;
-  font-size: 20px;
-  opacity: 0.5;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.15;
+  font-weight: normal;
+}
+
+
+.button-homepage {
+  top: 60px;
+  left: 50px;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+/* 3 BUTTONS DISTANCE */
+
+.button-forth {
+  top: 60px;
+  right: 60px;
+  font-size: 35px;
+}
+
+/* BUTTON ROMAN NUMBER OF THE ACTUAL PROJECT */
+a.project-number {
+  top: 60px;
+  right: 120px;
+  font-size: 40px;
+  font-weight: 500;
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.95;
 }
 
 .button-back {
-  top: calc(50vh - 10px);
-  left: 10vw;
-}
-
-.button-forth {
-  top: calc(50vh - 10px);
-  right: 10vw;
-}
-
-.button-homepage {
-  top: 10vh;
-  right: 10vw;
+  top: 60px;
+  right: 180px;
   font-size: 35px;
 }
+
 
 a:hover {
   color: white;
   cursor: pointer;
   animation: ani 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1;
-  opacity: 1;
-  transform: scale(2);
-  /* transition: opacity 2s;
-  transition: transform 2s; */
-  transition: all 0.5s ease-in-out;
+  opacity: 0.9;
+  transform: scale(1.3);
+  transition: all 0.4s ease-in-out;
+}
+
+canvas {
+  display: block;
 }

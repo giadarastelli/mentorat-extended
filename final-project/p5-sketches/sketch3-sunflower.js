@@ -31,7 +31,7 @@ function setup() {
     amp = new p5.Amplitude();
 
     //GUI SLIDER
-    gui = createGui('change the values ✎');
+    gui = createGui('“ wait for sound ♪ ... then move the mouse ”'); //empty text p5 gui
 
     //GUI rotation
     sliderRange(10, 140, 1);

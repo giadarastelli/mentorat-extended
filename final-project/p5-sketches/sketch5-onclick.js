@@ -33,7 +33,8 @@ function setup() {
     reverb.process(sound, 5, 1);
 
     //GUI SLIDER
-    gui = createGui('change the values ✎');
+    gui = createGui('“ click anywhere & move the mouse ”'); //text p5 gui
+    // gui = createGui('change the values ✎');
 
     //GUI number forms
     sliderRange(1, 20, 1);

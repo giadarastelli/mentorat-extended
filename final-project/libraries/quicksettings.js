@@ -73,7 +73,9 @@
     // region PRIVATE/STATIC DATA AND FUNCTIONS
     ////////////////////////////////////////////////////////////////////////////////
     var cssInjected = false,
-        css = ".qs_main{background-color:#dddddd;text-align:left;position:absolute;width:200px;font:12px sans-serif;box-shadow:5px 5px 8px rgba(0,0,0,0.35);user-select:none;-webkit-user-select:none;color:#000000;border:none}.qs_content{background-color:#cccccc;overflow-y:auto}.qs_title_bar{background-color:#eeeeee;user-select:none;-webkit-user-select:none;cursor:pointer;padding:5px;font-weight:bold;border:none;color:#000000}.qs_container{margin:5px;padding:5px;background-color:#eeeeee;border:none;position:relative}.qs_container_selected{border:none;background-color:#ffffff}.qs_range{-webkit-appearance:none;-moz-appearance:none;width:100%;height:17px;padding:0;margin:0;background-color:transparent;border:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.qs_range:focus{outline:none;border:none}.qs_range::-webkit-slider-runnable-track{width:100%;height:15px;cursor:pointer;background:#cccccc;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.qs_range:focus::-webkit-slider-runnable-track{background:#cccccc}.qs_range::-webkit-slider-thumb{-webkit-appearance:none;height:15px;width:15px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background:#999999;cursor:pointer;margin-top:0}.qs_range::-moz-range-track{width:100%;height:15px;cursor:pointer;background:#cccccc;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.qs_range::-moz-range-thumb{height:15px;width:15px;border:none;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background:#999999;cursor:pointer}.qs_range::-ms-track{width:100%;height:15px;cursor:pointer;visibility:hidden;background:transparent}.qs_range::-ms-thumb{height:15px;width:15px;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;background:#999999;cursor:pointer;border:none}.qs_range::-ms-fill-lower{background:#cccccc;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.qs_range:focus::-ms-fill-lower{background:#cccccc}.qs_range::-ms-fill-upper{background:#cccccc;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0}.qs_range:focus::-ms-fill-upper{background:#cccccc}.qs_button{background-color:#f6f6f6;color:#000000;height:30px;border:1px solid #aaaaaa;font:12px sans-serif}.qs_button:active{background-color:#ffffff;border:1px solid #aaaaaa}.qs_button:focus{border:1px solid #aaaaaa;outline:none}.qs_checkbox{cursor:pointer;display:inline}.qs_checkbox input{position:absolute;left:-99999px}.qs_checkbox span{height:16px;width:100%;display:block;text-indent:20px;background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAALklEQVQ4T2OcOXPmfwYKACPIgLS0NLKMmDVrFsOoAaNhMJoOGBioFwZkZUWoJgApdFaxjUM1YwAAAABJRU5ErkJggg==') no-repeat}.qs_checkbox input:checked+span{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvElEQVQ4T63Tyw2EIBAA0OFKBxBL40wDRovAUACcKc1IB1zZDAkG18GYZTmSmafzgTnnMgwchoDWGlJKheGcP3JtnPceCqCUAmttSZznuYtgchsXQrgC+77DNE0kUpPbmBOoJaBOIVQylnqWgAAeKhDve/AN+EaklJBzhhgjWRoJVGTbNjiOowAIret6a+4jYIwpX8aDwLIs74C2D0IIYIyVP6Gm898m9kbVm85ljHUTf16k4VUefkwDrxk+zoUEwCt0GbUAAAAASUVORK5CYII=') no-repeat}.qs_checkbox_label{position:absolute;top:7px;left:30px}.qs_label{margin-bottom:3px;user-select:none;-webkit-user-select:none;cursor:default;font:12px sans-serif}.qs_text_input{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;width:100%;padding:0 0 0 5px;height:24px;border:1px inset #ffffff;background-color:#ffffff;color:#000000;font-size:12px}.qs_text_input:focus{outline:none;background:#ffffff;border:1px inset #ffffff}.qs_select{background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAp0lEQVRIS+2SsQ3FIAwF7RVYhA5mgQFhFuhYhJKWL0eKxI8SGylKZ0p4+OBsHGNM+HChAiS7qkgyBKrovaLeOxhjbgtxZ+cFtgelFMg5QwgBvPd/EO5sDbKAlBLUWo/8CjmL075zDmKMj6rEKbpCqBL9aqc4ZUQAhVbInBMQUXz5Vg/WfxOktXZsWWtZLds9uIqlqaH1NFV3jdhSJA47E1CAaE8ViYp+wGiWMZ/T+cgAAAAASUVORK5CYII=') no-repeat right #f6f6f6;-webkit-appearance:none;-moz-appearance:none;appearance:none;color:#000000;width:100%;height:24px;border:1px solid #aaaaaa;-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;padding:0 5px;-moz-outline:none;font-size:14px}.qs_select option{font-size:14px}.qs_select::-ms-expand{display:none}.qs_select:focus{outline:none}.qs_number{height:24px}.qs_image{width:100%}.qs_progress{width:100%;height:15px;background-color:#cccccc;border:none;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.qs_progress_value{height:100%;background-color:#999999}.qs_textarea{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;resize:vertical;width:100%;padding:3px 5px;border:1px inset #ffffff;background-color:#ffffff;color:#000000;font-size:12px}.qs_textarea:focus{outline:none;background:#ffffff;border:1px inset #ffffff}.qs_color{position:absolute;left:-999999px}.qs_color_label{width:100%;height:20px;display:block;border:1px solid #aaaaaa;cursor:pointer;padding:0 0 0 5px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}.qs_file_chooser{position:absolute;left:-999999px}.qs_file_chooser_label{background-color:#f6f6f6;color:#000000;height:30px;border:1px solid #aaaaaa;font:12px sans-serif;width:100%;display:block;cursor:pointer;padding:7px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}"; // will be injected with default css
+
+        //SLIDER Values
+        css = ".qs_main{}"; // will be injected with default css
 
     function injectCSS() {
         var styleTag = document.createElement("style");
@@ -344,8 +346,7 @@
             this._draggable = draggable;
             if (this._draggable || this._collapsible) {
                 this._titleBar.style.cursor = "pointer";
-            }
-            else {
+            } else {
                 this._titleBar.style.cursor = "default";
             }
             return this;
@@ -437,8 +438,7 @@
         toggleVisibility: function () {
             if (this._hidden) {
                 this.show();
-            }
-            else {
+            } else {
                 this.hide();
             }
             return this;
@@ -453,8 +453,7 @@
             this._collapsible = collapsible;
             if (this._draggable || this._collapsible) {
                 this._titleBar.style.cursor = "pointer";
-            }
-            else {
+            } else {
                 this._titleBar.style.cursor = "default";
             }
             return this;
@@ -487,8 +486,7 @@
         toggleCollapsed: function () {
             if (this._collapsed) {
                 this.expand();
-            }
-            else {
+            } else {
                 this.collapse();
             }
             return this;
@@ -862,8 +860,7 @@
                 if (month < 10) month = "0" + month;
                 var day = date.getDate();
                 dateStr = year + "-" + month + "-" + day;
-            }
-            else {
+            } else {
                 dateStr = date;
             }
 
@@ -892,8 +889,7 @@
                         var day = date.getDate();
                         if (day < 10) day = "0" + day;
                         dateStr = year + "-" + month + "-" + day;
-                    }
-                    else {
+                    } else {
                         dateStr = date;
                     }
 
@@ -950,14 +946,12 @@
                 if (item.label) {
                     option.value = item.value;
                     option.innerText = item.label;
-                }
-                else {
+                } else {
                     option.label = item;
                     option.innerText = item;
                 }
                 select.add(option);
-            }
-            ;
+            };
 
             var self = this;
             select.addEventListener("change", function () {
@@ -990,8 +984,7 @@
                     var index
                     if (value.index != null) {
                         index = value.index;
-                    }
-                    else {
+                    } else {
                         index = value;
                     }
                     var options = this.control.options;
@@ -1365,11 +1358,9 @@
 
             if (valueDisplay === "numbers") {
                 label.innerHTML = "<b>" + title + ":</b> " + value + " / " + max;
-            }
-            else if (valueDisplay === "percent") {
+            } else if (valueDisplay === "percent") {
                 label.innerHTML = "<b>" + title + ":</b> " + Math.round(value / max * 100) + "%";
-            }
-            else {
+            } else {
                 label.innerHTML = "<b>" + title + "</b>";
             }
 
@@ -1390,8 +1381,7 @@
                     this.valueDiv.style.width = (this.value / this.max * 100) + "%";
                     if (this.valueDisplay === "numbers") {
                         this.label.innerHTML = "<b>" + this.title + ":</b> " + this.value + " / " + this.max;
-                    }
-                    else if (this.valueDisplay === "percent") {
+                    } else if (this.valueDisplay === "percent") {
                         this.label.innerHTML = "<b>" + this.title + ":</b> " + Math.round(this.value / this.max * 100) + "%";
                     }
                 }
@@ -1413,11 +1403,9 @@
 
             if (control.valueDisplay === "numbers") {
                 control.label.innerHTML = "<b>" + control.title + ":</b> " + control.value + " / " + control.max;
-            }
-            else if (control.valueDisplay === "percent") {
+            } else if (control.valueDisplay === "percent") {
                 control.label.innerHTML = "<b>" + control.title + ":</b> " + Math.round(control.value / control.max * 100) + "%";
-            }
-            else {
+            } else {
                 control.label.innerHTML = "<b>" + control.title + "</b>";
             }
             return this;
@@ -1447,8 +1435,7 @@
             if (type === "textarea") {
                 textInput = createElement("textarea", getNextID(), "qs_textarea", container);
                 textInput.rows = 5;
-            }
-            else {
+            } else {
                 textInput = createInput(type, getNextID(), "qs_text_input", container);
             }
             textInput.value = text || "";
@@ -1555,8 +1542,7 @@
                 var seconds = time.getSeconds();
                 if (seconds < 10) seconds = "0" + seconds;
                 timeStr = hours + ":" + minutes + ":" + seconds;
-            }
-            else {
+            } else {
                 timeStr = time;
             }
 
@@ -1587,8 +1573,7 @@
                         var seconds = time.getSeconds();
                         if (seconds < 10) seconds = "0" + seconds;
                         timeStr = hours + ":" + minutes + ":" + seconds;
-                    }
-                    else {
+                    } else {
                         timeStr = time;
                     }
 
@@ -1630,11 +1615,9 @@
     ////////////////////////////////////////////////////////////////////////////////
     if (typeof exports === "object" && typeof module === "object") {
         module.exports = QuickSettings
-    }
-    else if (typeof define === "function" && define.amd) {
+    } else if (typeof define === "function" && define.amd) {
         define(QuickSettings);
-    }
-    else {
+    } else {
         window.QuickSettings = QuickSettings;
     }
 

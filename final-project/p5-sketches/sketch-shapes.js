@@ -18,7 +18,6 @@ function setup() {
     sliderRange(1, 5, 1);
     gui.addGlobals('lineweight');
 
-
     //GUI shape
     sliderRange(1, 2, 1);
     gui.addGlobals('shapes');

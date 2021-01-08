@@ -1,7 +1,3 @@
-var r = 0;
-var g = 180;
-var b = 255;
-
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ellipseMode(CENTER);
@@ -9,25 +5,17 @@ function setup() {
 }
 
 function draw() {
-  background(0, 0, 0, 30);
-
-  r = map(mouseX, 0, 600, 0, 255);
-  g = map(mouseX, 0, 600, 0, 200);
-  b = map(mouseY, 0, 600, 255, 0);
-
+  background(0, 0, 0, 25);
 
   translate(width / 2, height / 2);
-  rotate(PI - frameCount / 30);
+  rotate(PI - frameCount / 20);
+  let col = map(mouseX, 0, width, 0, 180);
+  let diam = map(mouseX, 0, width, 380, 650);
   strokeWeight(1);
-  stroke(r, g, b);
+  stroke(col, 100, 50, 150);
   noFill();
-  if (mouseX <= width / 3) {
-    ellipse(0, 0, width / 3, 375);
-  }
-
-  if (mouseX >= width / 3) {
-    ellipse(0, 0, mouseX, 375);
-  }
+  ellipse(0, 0, 450, diam);
+  // ellipse(0, 0, random(450, 460), diam);
 }
 
 function windowResized() {

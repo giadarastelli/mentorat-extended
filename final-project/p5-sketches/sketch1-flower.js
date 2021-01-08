@@ -28,7 +28,7 @@ function setup() {
 
   //GUI Y-lenght
   sliderRange(0, width / 2, 1);
-  gui = createGui('“ change slider values ”'); //empty text p5 gui
+  gui = createGui('“ wait for sound ♪ and change slider values ”'); //empty text p5 gui
   gui.addGlobals('lenght');
 
   //GUI opacity background

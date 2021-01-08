@@ -10,47 +10,48 @@ body {
 }
 
 /* INTRODUCTION TEXT MAIN MENU */
-
 p {
   position: fixed;
-  width: 320px;
-  height: 350px;
   color: white;
-  background: none;
-  position: fixed;
-  opacity: 1;
-  left: calc(50vw - 160px);
-  text-align: center;
-  line-height: 1.4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   margin: auto;
-  border-radius: 100%;
+  opacity: 0.9;
 }
 
 .typo1 {
-  font-size: 18px;
+  position: fixed;
+  line-height: 1.2;
+  top: 61px;
+  left: 60px;
   font-weight: normal;
+  font-size: 40px;
   font-style: normal;
   text-transform: uppercase;
-  position: fixed;
-  top: calc(50vh - 300px);
 }
 
 .typo2 {
   position: fixed;
-  top: calc(50vh - 175px);
+  line-height: 1.4;
+  width: 320px;
+  height: 160px;
+  left: calc(50vw - 160px);
+  top: calc(50vh - 80px);
+  font-weight: lighter;
+  font-size: 16px;
+  font-style: italic;
+  text-transform: lowercase;
+  text-align: left;
 }
 
 .typo3 {
   position: fixed;
-  font-size: 18px;
+  line-height: 1.2;
+  top: 67px;
+  right: 220px;
+  font-size: 16px;
   font-weight: lighter;
   font-style: italic;
+  text-align: right;
   text-transform: lowercase;
-  top: calc(50vh - 30px);
-
 }
 
 
@@ -65,7 +66,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.15;
+  opacity: 0.2;
   font-weight: normal;
 }
 
@@ -81,14 +82,14 @@ a {
 
 .button-forth {
   top: 60px;
-  right: 60px;
+  right: 50px;
   font-size: 35px;
 }
 
 /* BUTTON ROMAN NUMBER OF THE ACTUAL PROJECT */
 a.project-number {
   top: 60px;
-  right: 120px;
+  right: 110px;
   font-size: 40px;
   font-weight: 500;
   pointer-events: none;
@@ -98,7 +99,7 @@ a.project-number {
 
 .button-back {
   top: 60px;
-  right: 180px;
+  right: 170px;
   font-size: 35px;
 }
 
@@ -107,7 +108,7 @@ a:hover {
   color: white;
   cursor: pointer;
   animation: ani 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) 1;
-  opacity: 0.9;
+  opacity: 0.95;
   transform: scale(1.3);
   transition: all 0.4s ease-in-out;
 }

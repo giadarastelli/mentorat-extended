@@ -111,21 +111,8 @@ class Petal {
                 strokeWeight(lineweight);
 
                 push();
-                //rotate(speed * diam / frameCount);
-                //rotate(mouseX * diam / speed);
+
                 rotate(-PI / mouseX * diam);
-
-                //position for 5 shapes : width / 6, width / 3, width / 2, width / 1.5, width / 1.2
-                // if (mouseX < width / 3) {
-                //     ellipse(0, 0, diam, diam / 3);
-                // }
-                // if (mouseX >= width / 3 && mouseX <= width / 1.5) {
-                //     ellipse(0, 0, diam, 0); //line
-                // }
-                // if (mouseX >= width / 1.5 && mouseX <= width) {
-                //     rect(0, 0, diam, diam);
-                // }
-
 
                 if (shape <= 1) {
                     ellipse(0, 0, diam, diam / 3);
@@ -138,7 +125,7 @@ class Petal {
                     rect(0, 0, diam, diam);
                 }
                 pop();
-                //console.log("diam")  ; 
+                //console.log("diam"); 
             }
         }
         this.outDiam = this.outDiam + 5;

@@ -38,7 +38,7 @@ function setup() {
     gui.addGlobals('spin');
 
     //GUI cos
-    sliderRange(0.5, 1, 0.1);
+    sliderRange(0.5, 1, 0.5);
     gui.addGlobals('twist');
 
     //GUI opacity background
@@ -70,15 +70,10 @@ function draw() {
     var y = r * sin(angle);
 
     opacityCol = map(n, 0, width / 2, 255, 0);
-
     //stroke(angle%255, 200, 0);  
-
-    // if (shape <= 1) {
 
     if (mouseX < width / 2) {
 
-        //stroke(0, 200, size * 15);
-        //strokeWeight(size / 5);
         fill(0);
         stroke(0, 255, size * 15);
         strokeWeight(2);
@@ -87,10 +82,7 @@ function draw() {
 
         console.log(size);
     }
-
-    // if (shape >= 2) {
     if (mouseX >= width / 2 && mouseX <= width) {
-        // fill(size * 15, 0, size * 15, size * 20);
         fill(0);
         stroke(size * 20, 100, 50);
         push();
@@ -100,7 +92,7 @@ function draw() {
     }
 
     // when n is bigger than width, changes direction and comes back to the center
-    //effects/results in the next statement
+    //effect in next statement
     if (n > width / 4) {
         switchDirection = true
     } else if (n <= 0) {
@@ -114,13 +106,6 @@ function draw() {
         // n = n - vol;
         n = n - 1;
     }
-
-    //     if (n >= windowWidth / 3) {
-    //         console.log('new canvas');
-    //         n = 0;
-    //     } else {
-    //         console.log('actual canvas');
-    //     }
 }
 
 function windowResized() {

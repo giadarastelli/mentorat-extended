@@ -42,7 +42,6 @@ function draw() {
   vol = amp.getLevel();
   sizeAmp = map(vol, 0, 1, 0, 200);
 
-
   noFill();
 
   strokeWeight(sizeAmp / 10);
@@ -66,7 +65,6 @@ function drawCircle(x, y, d) {
     push();
     rotate(-PI / 30 * frameCount / 20);
     stroke(50, d / 5, mouseY / 2, sizeAmp * 5);
-    //stroke(diam, 170, mouseY / 2, opacityCol);
     drawCircle(x - d * 0.14, y - d * 0.14, d * 0.6);
     pop();
 

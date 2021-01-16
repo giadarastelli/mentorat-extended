@@ -76,7 +76,7 @@ function draw() {
     //serieFibonacci.push(a); 
 
     //EXPLAINATION
-    //0=>1,1=>1,2=>2,3=>3,4=>5,5=>8 
+    //0=>1,1=>1,2=>2,3=>3,4=>5,5=>8,6=>13
     //left : key  
     //right: value 
 

@@ -15,7 +15,6 @@ var vol = 1;
 
 function setup() {
 
-  textSize(8);
   createCanvas(windowWidth, windowHeight);
   background(0);
 

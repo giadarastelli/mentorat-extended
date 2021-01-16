@@ -55,8 +55,6 @@ function setup() {
     //GUI shape
     sliderRange(1, 3, 1);
     gui.addGlobals('shape');
-
-
 }
 
 function loaded() {
@@ -72,7 +70,6 @@ function touchStarted() {
 function draw() {
     background(0, 0, 0, fade);
     translate(width / 2, height / 2);
-
 
     //VOLUME DEPENDING ON Y-AXIS
     let volumeSound = map(mouseY, 1, height, 1, 0.1);
